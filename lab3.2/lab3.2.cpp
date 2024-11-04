@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -14,7 +14,26 @@ int main() {
     cout << "c = "; cin >> c;
     cout << "x = "; cin >> x;
 
-    // Розгалуження за умовами
+    // Розгалуження за умовами (повна форма)
+    if (x + c < 0) {
+        if (a != 0) {
+            F = -a * x * x - b;
+        }
+        else {
+            F = (x / c) + (c / x);  // Якщо a == 0
+        }
+    }
+    else if (x + c > 0 && a == 0) {
+        F = (x - a) / (x - c);
+    }
+    else {
+        F = (x / c) + (c / x);
+    }
+
+    // Виведення результату
+    cout << "F = " << F << endl;
+
+    // Скорочена форма розгалуження
     if (x + c < 0 && a != 0) {
         F = -a * x * x - b;
     }
@@ -22,11 +41,8 @@ int main() {
         F = (x - a) / (x - c);
     }
     else {
-        F = (x + c) / (c / x);
+        F = (x / c) + (c / x);
     }
-
-    // Виведення результату
-    cout << "F = " << F << endl;
 
     return 0;
 }
