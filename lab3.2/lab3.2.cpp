@@ -14,14 +14,11 @@ int main() {
     cout << "x = "; cin >> x;
 
     // Повна
-    if (x + c < 0) {
-        if (a != 0) {
-            F = -a * x * x - b;
-        }
-        else {
-            F = (x / c) + (c / x);
-        }
+    if (x + c < 0 && a != 0) {
+         F = -a * x * x - b;
+        
     }
+
     else if (x + c > 0 && a == 0) {
         F = (x - a) / (x - c);
     }
@@ -35,12 +32,14 @@ int main() {
     if (x + c < 0 && a != 0) {
         F = -a * x * x - b;
     }
-   if (x + c > 0 && a == 0) {
+    if (x + c > 0 && a == 0) {
         F = (x - a) / (x - c);
     }
-    if (!((x + c < 0 && a != 0) && (x + c > 0 && a == 0))){
+    if (!((x + c < 0 && a != 0) && (x + c > 0 && a == 0))) {
         F = (x / c) + (c / x);
     }
+
+    cout << "F = " << F << endl;
 
     return 0;
 }
