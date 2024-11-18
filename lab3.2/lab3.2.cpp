@@ -2,19 +2,18 @@
 using namespace std;
 
 int main() {
-    double x;  // Вхідний аргумент
-    double a;  // Вхідний параметр
-    double b;  // Вхідний параметр
-    double c;  // Вхідний параметр
-    double F;  // Результат обчислення функції
+    double x;
+    double a;
+    double b;
+    double c;
+    double F;
 
-    // Введення значень параметрів
     cout << "a = "; cin >> a;
     cout << "b = "; cin >> b;
     cout << "c = "; cin >> c;
     cout << "x = "; cin >> x;
 
-    // Розгалуження за умовами (повна форма)
+    // Повна
     if (x + c < 0) {
         if (a != 0) {
             F = -a * x * x - b;
@@ -30,10 +29,9 @@ int main() {
         F = (x / c) + (c / x);
     }
 
-    // Виведення результату
     cout << "F = " << F << endl;
 
-    // Скорочена форма розгалуження
+    // Скорочена
     if (x + c < 0 && a != 0) {
         F = -a * x * x - b;
     }
