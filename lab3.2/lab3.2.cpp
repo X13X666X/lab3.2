@@ -35,10 +35,10 @@ int main() {
     if (x + c < 0 && a != 0) {
         F = -a * x * x - b;
     }
-    else if (x + c > 0 && a == 0) {
+   if (x + c > 0 && a == 0) {
         F = (x - a) / (x - c);
     }
-    else {
+    if (!((x + c < 0 && a != 0) && (x + c > 0 && a == 0))){
         F = (x / c) + (c / x);
     }
 
