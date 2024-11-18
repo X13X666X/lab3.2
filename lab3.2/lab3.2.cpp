@@ -19,7 +19,7 @@ int main() {
             F = -a * x * x - b;
         }
         else {
-            F = (x / c) + (c / x);  // Якщо a == 0
+            F = (x / c) + (c / x);
         }
     }
     else if (x + c > 0 && a == 0) {
